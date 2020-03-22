@@ -246,7 +246,7 @@ li{
 
 .profile-img{
     flex: 1;
-    margin-left: 10rem;
+    margin-left: 15rem;
 }
 
 .about img{
@@ -255,6 +255,7 @@ li{
 
 .about-details{
     flex: 1;
+    margin-left: 10rem;
 }
 
 .social-media{
