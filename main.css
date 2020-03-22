@@ -36,6 +36,11 @@ p{
     font-weight: 300;
 }
 
+ol,ul{
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
 img{
     width: 100%;
 }
@@ -85,6 +90,7 @@ img{
     height: 1.5rem;
     border-radius: 100%;
     bottom: -1rem;
+    animation: move 1.5s infinite;
 }
 
 .section-heading h6{
@@ -268,20 +274,17 @@ li{
     transition: color 650ms;
 }
 
-.fa-facebook-square:hover{
-    color: #4267b2;
+.fa-github:hover{
+    color: #000000;
 }
 
-.fa-twitter-square:hover{
-    color: #38a1f3;
+.fa-linkedin:hover{
+    color: #0e76a8;
 }
 
-.fa-dribbble-square:hover{
-    color: #ea4c89;
-}
 /*End about*/
 
-/*Start services*/
+/*Start skills*/
 .my-skills{
     margin-top: 10rem;
     display: grid;
@@ -320,7 +323,7 @@ li{
     margin: auto;
     transform: rotate(-45deg);
 }
-/*End services*/
+/*End skills*/
 
 /*Start portfolio*/
 .portfolio-item{
@@ -350,7 +353,7 @@ li{
 }
 
 .portfolio-description h6{
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-transform: uppercase;
     font-weight: 300;
     opacity: 0.3;
@@ -369,14 +372,14 @@ li{
     color: #2f67cd;
     transform: rotate(360deg);
 }
-/*End services*/
+/*End portfolio*/
 
 /*Start timeline*/
 .timeline ul{
     border-left: 4px solid #ffe838;
     border-radius: .8rem;
     background-color: rgba(0, 0, 0, 0, 0.05);
-    margin: 0 auto;
+    margin: 0 30rem;
     position: relative;
     padding: 5rem;
     list-style: none;
@@ -414,10 +417,10 @@ li{
 
 .timeline .date::before{
     content: attr(data-date);
-    left: -21rem;
-    text-align: right;
+    left: -22rem;
     min-width: 12rem;
     font-size: 1.5rem;
+    align-content: right;
 }
 
 .timeline .date::after{
@@ -513,6 +516,17 @@ input[type="submit"]:hover{
     }
     100%{
         box-shadow: 0 0 0 0 rgba(253, 87, 191, 0);
+    }
+}
+@keyframes move{
+    0%{
+        transform: translateX(-300%);
+    }
+    50%{
+        transform: translateX(200%);
+    }
+    100%{
+        transform: translateX(-300%);
     }
 }
 /*End animations*/
