@@ -106,8 +106,9 @@ img{
 .cta{
     display: inline-block;
     margin: 2.5rem 2.5rem;
-    font-size: 1.3rem;
-    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
     padding: 1.5rem;
     color: #fff;
     text-transform: uppercase;
@@ -474,37 +475,63 @@ li{
     background-color: #221e3f;
 }
 
-form{
-    width: 70%;
-    margin: 0 auto;
+.contact .section-heading{
+    margin-bottom: 5rem;
 }
 
-form label{
-    font-size: 1.5rem;
+.button{
+    position: relative;
+    display: inline-block;
+    margin: 0 42.5%;
 }
-
-input,
-textarea{
-    width: 100%;
-    padding: 1rem;
-    margin-bottom: 5px;
-    border: none;
-    outline-color: #fd57bf;
+  
+.button a{
+    color:white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight:bold;
+    font-size:25px;
+    text-align: center;
+    text-decoration:none;
+    background-color:rgb(233, 160, 71);
+    display:block;
+    position:relative;
+    padding:15px 30px;
+    
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-shadow: 0px 1px 0px #000;
+    filter: dropshadow(color=#000, offx=0px, offy=1px);
+    
+    -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
-
-input[type="submit"]{
-    width: initial;
-    background-color: #fd57bf;
-    color: #eee;
-    padding: 1rem 2rem;
-    border-radius: .8rem;
-    cursor: pointer;
-    transition: background-color 650px;
+  
+.button a:active{
+    top:10px;
+    background-color:#F78900;
+    
+    -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+    -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #915100;
+    box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
 }
-
-input[type="submit"]:hover{
-    color: #221e3f;
-    background-color: #ffe838;
+  
+.button:after{
+    content:"";
+    height:100%;
+    width:100%;
+    padding:4px;
+    position: absolute;
+    bottom:-15px;
+    left:-4px;
+    z-index:-1;
+    background-color:#2B1800;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
 /*End contact*/
 
@@ -553,6 +580,17 @@ input[type="submit"]:hover{
         box-shadow: 0 0 0 0 rgba(253, 87, 191, 0);
     }
 }
+@keyframes button{
+    0%{
+        box-shadow: 0 0 0 0 rgba(253, 87, 191, 0.99);
+    }
+    70%{
+        box-shadow: 0 0 0 2rem rgba(253, 87, 191, 0);
+    }
+    100%{
+        box-shadow: 0 0 0 0 rgba(253, 87, 191, 0);
+    }
+}
 @keyframes move{
     0%{
         transform: translateX(-300%);
@@ -565,16 +603,6 @@ input[type="submit"]:hover{
     }
 }
 
-@-webkit-keyframes shine {
-	100% {
-		left: 100%;
-	}
-}
-@keyframes shine {
-	100% {
-		left: 100%;
-	}
-}
 /*End animations*/
 
 /*Start media queries*/
